@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMeans Clustering Algorithm</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>KMeans Clustering Algorithm</h1>
+
+        <label for="numClusters">Number of Clusters (k):</label>
+        <input type="number" id="numClusters" value="3">
+
+        <label for="initMethod">Initialization Method:</label>
+        <select id="initMethod">
+            <option value="manual">Manual</option>
+            <option value="random">Random</option>
+            <option value="farthestFirst">Farthest First</option>
+            <option value="kmeans++">KMeans++</option>
+        </select>
+
+        <button id="stepThroughBtn">Step Through KMeans</button>
+        <button id="runToConvergenceBtn">Run to Convergence</button>
+        <button id="generateDatasetBtn">Generate New Dataset</button>
+        <button id="resetBtn">Reset Algorithm</button>
+
+        <div id="plot">
+            <h2>KMeans Clustering Animation</h2>
+            <canvas id="plotCanvas" width="600" height="400"></canvas>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
